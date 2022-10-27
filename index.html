@@ -17,9 +17,9 @@
                 <nav class="navigation">
                     <a class="logo" href="./index.html"><span class="logo-web">Web</span>Studio</a>
                     <ul class="navigation-list list">
-                        <li><a class="link current" href="./index.html">Студія</a></li>
-                        <li><a class="link" href="./portfolio.html">Портфоліо</a></li>
-                        <li><a class="link" href="#contact">Контакти</a></li>
+                        <li class="navigation-item"><a class="link current" href="./index.html">Студія</a></li>
+                        <li class="navigation-item"><a class="link" href="./portfolio.html">Портфоліо</a></li>
+                        <li class="navigation-item"><a class="link" href="#contact">Контакти</a></li>
                     </ul>
                 </nav>
                 <ul class="contact-list list">
@@ -44,7 +44,16 @@
             <section class="section-hero section">
                 <div class="conteiner">
                     <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-                    <button class="hero-btn" type="button">Замовити послугу</button>
+                    <button class="hero-btn" data-modal-open type="button">Замовити послугу</button>
+                    <div class="backdrop is-hidden" data-modal>
+                        <div class="modal">
+                          <button class="btn-close" data-modal-close type="button">
+                            <svg class="icon-close">
+                                <use href="./image/icons.svg#icon-close"></use>
+                            </svg>
+                          </button>  
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="section-benefits section">
@@ -94,9 +103,18 @@
                 <div class="conteiner">
                     <h2 class="title">Чим ми займаємося</h2>
                     <ul class="about-list list">
-                        <li><img src="./image/box1.jpg" alt="Програмування" width="370" /></li>
-                        <li><img src="./image/box2.jpg" alt="Дизайн" width="370" /></li>
-                        <li><img src="./image/box3.jpg" alt="Кольорове оформлення" width="370" /></li>
+                        <li class="about-item">
+                            <img src="./image/box1.jpg" alt="Програмування" width="370" />
+                            <p class="about-text">Десктопні додатки</p>
+                        </li>
+                        <li class="about-item">
+                            <img src="./image/box2.jpg" alt="Дизайн" width="370" />
+                            <p class="about-text">Мобільні додатки</p>
+                        </li>
+                        <li class="about-item">
+                            <img src="./image/box3.jpg" alt="Кольорове оформлення" width="370" />
+                            <p class="about-text">Дизайнерські рішення</p>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -352,5 +370,6 @@
                 </div>
             </div>
         </footer>
+         <script src="./js/modal.js"></script>
     </body>
 </html>
